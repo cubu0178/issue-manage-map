@@ -5,7 +5,7 @@
   "main": "index.jsx",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.js --color -p --progress --hide-modules --display-optimization-bailout",
-    "lint": "eslint . --ext .jsx --ext .js",
+    "lint": "eslint . --fix --ext .jsx --ext .js",
     "test": "cross-env NODE_ENV=test jest",
     "start": "cross-env NODE_ENV=development node ./server/dev.js"
   },
@@ -33,6 +33,11 @@
       "react-hot-loader/babel"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test && npm run lint"
+    }
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -48,6 +53,7 @@
     "file-loader": "^1.1.6",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^2.30.1",
+    "husky": "^0.15.0-rc.8",
     "jest": "^22.3.0",
     "postcss-loader": "^2.1.0",
     "react-hot-loader": "^3.1.3",

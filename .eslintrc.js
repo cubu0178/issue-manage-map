@@ -33,6 +33,7 @@ module.exports = {
     "no-nested-ternary": "warn",
     "no-tabs": "warn",
     "no-console": 0,
+    "quotes": "warn",
     "jsx-quotes": ["warn", "prefer-double"],
     "semi": [
       "error",

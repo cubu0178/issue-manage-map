@@ -27,7 +27,8 @@ const configurate = (options) => ({
     filename: "bundle.js"
   },
   
-  plugins: options.plugins.concat([])
+  plugins: options.plugins.concat([]),
+  devtool: options.devtool
 });
 
 module.exports = configurate;

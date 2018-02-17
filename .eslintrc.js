@@ -18,10 +18,11 @@ module.exports = {
   ],
   "rules": {
     "getter-return": "error",
-    "class-methods-use-this": "warn",
+    "class-methods-use-this": ["warn",
+                               { "exceptMethods": ["render"]}],
     "brace-style": ["warn", "1tbs", { "allowSingleLine": true }],
     "indent": [
-      "error",
+      "warn",
       2
     ],
     "linebreak-style": [
@@ -31,16 +32,12 @@ module.exports = {
     "no-array-constructor": "error",
     "no-nested-ternary": "warn",
     "no-tabs": "warn",
-    "quotes": [
-      "warn",
-      "double"
-    ],
+    "no-console": 0,
     "jsx-quotes": ["warn", "prefer-double"],
     "semi": [
       "error",
       "always"
     ],
-    "no-var": ["error"],
-    "sort-imports": ["warn"]
+    "no-var": ["error"]
   }
 };

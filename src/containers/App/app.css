@@ -1,0 +1,9 @@
+.app {
+    background: yellow;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.app > h1 {
+    text-align: center;
+}

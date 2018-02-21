@@ -3,15 +3,18 @@ Real-time map that shows maintenance issues, assists with task scheduling, and a
 
 ## Contributing
 ### Quick start
-- You need `npm`, the package manager of nodejs, installed. Check [NodeJS](https://nodejs.org/en/) website to install it.
+- Install [yarn](https://yarnpkg.com/en/), a pacakage manager, if it is not already installed.
 - Clone this repo using `git clone https://github.com/Earth-Dimension-C-137/issue-manage-map.git`
 - Move to the appropriate directory
-- Run `npm install` in order to install dependencies.
+- Run `yarn install` in order to install dependencies.
 
-Please create a new branch for each new features.
+**Please create a new branch for each new features.**
+
+> Hint:
+> for Microsoft Windows users, press <shift> and right click to open the Command Prompt or PowerShell in the same folder.
 
 ### Run the Development Server
-Input `npm start` to the terminal to start a development server.
+Input `yarn start` to the terminal to start a development server.
 The server will load all the modification automatically after saving the files.
 We do not need refresh the page to see changes.
 
@@ -21,7 +24,7 @@ We do not need refresh the page to see changes.
 - [Styling](documents/css.md): How to work with the CSS tooling
 
 ### Run unit tests
-`npm test`
+`yarn test`
 
 ## License
 The project is under [Apache License 2.0](LICENSE), , Copyright (c) 2018 Earth Dimension C-137

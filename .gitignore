@@ -6,3 +6,6 @@ node_modules
 .DS_Store
 npm-debug.log
 .tern-port
+
+# Use yarn instead of npm
+package-lock.json

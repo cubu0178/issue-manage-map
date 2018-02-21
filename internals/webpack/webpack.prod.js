@@ -7,12 +7,12 @@ const root = path.resolve(process.cwd());
 
 const option = {
   entry: [
-    path.join(root, "src/app.jsx"), // Start with src/app.js
+    path.join(root, "app/app.jsx"), // Start with src/app.js
   ],
   plugins: [
     // Minify and optimize the index.html
     new HtmlWebpackPlugin({
-      template: "src/index.html",
+      template: "app/index.html",
       minify: {
         removeComments: true,
         collapseWhitespace: true,

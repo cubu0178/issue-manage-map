@@ -1,4 +1,4 @@
-const combineLoaders  = require("webpack-combine-loaders");
+const combineLoaders  = require("webpack-combine-loaders")
 const path = require("path");
 
 const root = path.resolve(process.cwd());

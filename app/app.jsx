@@ -1,16 +1,29 @@
+/**
+ * app.js
+ *
+ * This is the entry file for the application, only setup and boilerplate
+ * code.
+ */
+
 import React from "react";
 import ReactDOM from "react-dom";
-
 import { AppContainer } from "react-hot-loader";
+
+import { BrowserRouter } from "react-router-dom";
+
 import App from "./containers/App";
+
+const MOUNT_NODE = document.getElementById("app");
 
 // Wrapper for the render function in react
 const render = Component => {
   ReactDOM.render(
     <AppContainer>
-      <Component />
+      <BrowserRouter>
+        <Component />
+      </BrowserRouter>
     </AppContainer>,
-    document.getElementById("app")
+    MOUNT_NODE
   );
 };
 

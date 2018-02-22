@@ -1,9 +1,12 @@
-// Demo test
+import React from "react";
+import { shallow } from "enzyme";
+import App from "../index.jsx";
 
-test("adding positive numbers is not zero", () => {
-  for (let a = 1; a < 10; a++) {
-    for (let b = 1; b < 10; b++) {
-      expect(a + b).not.toBe(0);
-    }
-  }
+
+describe("<App />", () => {
+  const app = shallow(<App />);
+
+  it("has a router Switch component", () => {
+    expect(app.find("Switch").length).toBe(1);
+  });
 });

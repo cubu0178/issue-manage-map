@@ -38,6 +38,12 @@
       "pre-commit": "npm test && npm run lint"
     }
   },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/internals/mocks/file.js",
+      "\\.(css)$": "identity-obj-proxy"
+    }
+  },
   "devDependencies": {
     "autoprefixer": "^8.0.0",
     "babel-core": "^6.26.0",
@@ -58,6 +64,7 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^2.30.1",
     "husky": "^0.15.0-rc.8",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^22.3.0",
     "postcss-loader": "^2.1.0",
     "precss": "^3.1.0",

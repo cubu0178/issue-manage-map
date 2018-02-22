@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import style from "./app.css";
 
 /*
@@ -8,7 +9,6 @@ import style from "./app.css";
 
 export default class App extends Component {
   render() {
-    console.log(style.container);
     return (
       <div className={style.app}>
         <h1>Hello, world.</h1>

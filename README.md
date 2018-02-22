@@ -27,4 +27,4 @@ We do not need refresh the page to see changes.
 `yarn test`
 
 ## License
-The project is under [Apache License 2.0](LICENSE), , Copyright (c) 2018 Earth Dimension C-137
+The project is under [Apache License 2.0](LICENSE), Copyright (c) 2018 Earth Dimension C-137

@@ -3,7 +3,7 @@ const path = require("path");
 
 // Paths
 const root = path.resolve(process.cwd());
-const app = path.join(process.cwd(), 'app');
+const app = path.join(process.cwd(), "app");
 
 // configurate function used in the config files
 const configurate = (options) => ({
@@ -53,10 +53,10 @@ const configurate = (options) => ({
   resolve: {
     extensions: ["*", ".js", ".jsx"],
     alias: {
-      'css': path.join(app, 'styles'),
-      'containers': path.join(app, 'containers'),
-      'components': path.join(app, 'components'),
-      'utils': path.join(app, 'utils')
+      "css": path.join(app, "styles"),
+      "containers": path.join(app, "containers"),
+      "components": path.join(app, "components"),
+      "utils": path.join(app, "utils")
     }
   },
   output: {

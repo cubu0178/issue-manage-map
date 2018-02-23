@@ -7,7 +7,8 @@
     "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.js --color -p --progress --hide-modules --display-optimization-bailout",
     "lint": "eslint . --fix --ext .jsx --ext .js",
     "test": "cross-env NODE_ENV=test jest",
-    "start": "cross-env NODE_ENV=development node ./server/dev.js"
+    "start": "cross-env NODE_ENV=development node ./server/dev.js",
+    "tee": "lint-staged"
   },
   "license": "Apache-2.0",
   "babel": {
@@ -35,8 +36,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test && npm run lint"
+      "pre-commit": "yarn test && yarn run lint && lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.js": ["eslint --fix --ext .js", "git add"],
+    "*.jsx": ["eslint --fix --ext .jsx", "git add"]
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/internals/jest/setup.js",
@@ -67,6 +72,7 @@
     "husky": "^0.15.0-rc.8",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^22.3.0",
+    "lint-staged": "^7.0.0",
     "postcss-loader": "^2.1.0",
     "precss": "^3.1.0",
     "react-hot-loader": "^3.1.3",

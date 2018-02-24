@@ -53,10 +53,7 @@ const configurate = (options) => ({
   resolve: {
     extensions: ["*", ".js", ".jsx"],
     alias: {
-      "css": path.join(app, "styles"),
-      "containers": path.join(app, "containers"),
-      "components": path.join(app, "components"),
-      "utils": path.join(app, "utils")
+      "app": app
     }
   },
   output: {

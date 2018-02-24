@@ -7,8 +7,7 @@
     "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.js --color -p --progress --hide-modules --display-optimization-bailout",
     "lint": "eslint . --fix --ext .jsx --ext .js",
     "test": "cross-env NODE_ENV=test jest",
-    "start": "cross-env NODE_ENV=development node ./server/dev.js",
-    "tee": "lint-staged"
+    "start": "cross-env NODE_ENV=development node ./server/dev.js"
   },
   "license": "Apache-2.0",
   "babel": {
@@ -40,14 +39,21 @@
     }
   },
   "lint-staged": {
-    "*.js": ["eslint --fix --ext .js", "git add"],
-    "*.jsx": ["eslint --fix --ext .jsx", "git add"]
+    "*.js": [
+      "eslint --fix --ext .js",
+      "git add"
+    ],
+    "*.jsx": [
+      "eslint --fix --ext .jsx",
+      "git add"
+    ]
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/internals/jest/setup.js",
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/internals/mocks/file.js",
-      "\\.(css)$": "identity-obj-proxy"
+      "\\.(css)$": "identity-obj-proxy",
+      "app/(.*)$": "<rootDir>/app/$1"
     }
   },
   "devDependencies": {
@@ -86,6 +92,7 @@
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-icons": "^2.2.7",
     "react-router-dom": "^4.2.2"
   }
 }

@@ -7,7 +7,7 @@
  */
 
 import React from "react";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import Header from "app/components/Header";
 
@@ -25,13 +25,7 @@ import style from "./app.css";
 export default class App extends React.Component {
   render() {
     return <div >
-      <Header title="The great map" />
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-        </ul>
-      </nav>
+      <Header title="Issue map" />
       <div className={style.container}>
         <Switch>
           <Route exact path="/" component={HomePage} />

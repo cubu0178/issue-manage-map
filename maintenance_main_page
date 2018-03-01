@@ -63,7 +63,7 @@
 				</form>
 			<br>
 			<div>
-				<a href="maintinace_login_page.html">
+				<a href="maintenance_login_page.html">
 				<button type="" name="login" id = "emplogin">
 					Employee Login
 				</button>

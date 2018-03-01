@@ -8,15 +8,14 @@
 
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+import { Container } from "semantic-ui-react";
+
 
 import Header from "app/components/Header";
-
 import HomePage from "../HomePage";
 import AboutPage from "../AboutPage";
 import LoginPage from "../LoginPage";
 import NotFoundPage from "../NotFoundPage";
-
-import style from "./app.css";
 
 /*
  * The root container of the whole application
@@ -25,16 +24,16 @@ import style from "./app.css";
 
 export default class App extends React.Component {
   render() {
-    return <div >
-      <Header title="Issue map" />
-      <div className={style.container}>
+    return <div>
+      <Header title="Maintenance Requests" />
+      <Container>
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/about" component={AboutPage} />
           <Route exact path="/login" component={LoginPage} />
           <Route exact path="" component={NotFoundPage} />
         </Switch>
-      </div>
+      </Container>
     </div>;
   }
 }

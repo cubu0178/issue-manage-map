@@ -11,8 +11,7 @@ const option = {
   entry: [
     "react-hot-loader/patch",
     "webpack-hot-middleware/client",
-    path.join(root, "app/app.jsx"), // Start with src/app.js
-
+    path.join(root, "app/app.jsx"), // Start with src/app.jsx
   ],
   plugins: [
     new HtmlWebpackPlugin({

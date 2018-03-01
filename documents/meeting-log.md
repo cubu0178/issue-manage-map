@@ -22,3 +22,7 @@ Step 3:
 Comment
 
 We still need to assign tasks and start working on the website.
+
+## February 26th, 2018
+Members in attendance: Kevin, Lesley, Madie, Daniel, Nolan, Curry
+We talked about the strategy of dividing our tasks and allocate them to our group. Madie provides a design of the layout of our page. We make her our “CSS master” about that and she will keep charge of the style of our website.

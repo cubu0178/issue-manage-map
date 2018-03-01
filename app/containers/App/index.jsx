@@ -13,6 +13,7 @@ import Header from "app/components/Header";
 
 import HomePage from "../HomePage";
 import AboutPage from "../AboutPage";
+import LoginPage from "../LoginPage";
 import NotFoundPage from "../NotFoundPage";
 
 import style from "./app.css";
@@ -30,6 +31,7 @@ export default class App extends React.Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/about" component={AboutPage} />
+          <Route exact path="/login" component={LoginPage} />
           <Route exact path="" component={NotFoundPage} />
         </Switch>
       </div>

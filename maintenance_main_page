@@ -20,8 +20,23 @@
 			</div>
 			<div id=form>
 				<form action="/somepage.php">
-					<div id = "map">
-						Insert Map Here
+					<div id = "mapbackground">
+						<div id = "map">
+							<!--API map key AIzaSyAVOci6YpvS6Rt7qzkZOP7Yfy8182EAvmU -->
+							<script>
+								function myMap() 
+								{
+									var mapOptions = 
+									{
+										center: new google.maps.LatLng(51.5, -0.12),
+										zoom: 10,
+										mapTypeId: google.maps.MapTypeId.HYBRID
+									}
+									var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+								}
+							</script>
+							<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVOci6YpvS6Rt7qzkZOP7Yfy8182EAvmU&callback=myMap"></script>
+						</div>
 					</div>
 					<br>
 					<div id=room_location>
@@ -54,6 +69,7 @@
 				</button>
 				</a>
 			</div>
+			<br>
 		</div>
 
       

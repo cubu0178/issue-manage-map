@@ -11,7 +11,7 @@ class HeaderMenu extends React.Component {
     const pathname = this.props.pathname;
 
     return (<Container>
-      <Menu size="large" pointing secondary>
+      <Menu size="large" secondary>
         {items.map((item) => {
           const active = pathname === item.path;
           return <Menu.Item as={Link}

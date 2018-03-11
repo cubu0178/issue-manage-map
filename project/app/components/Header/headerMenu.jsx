@@ -3,7 +3,7 @@ import React from "react";
 import { Container, Menu } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
-import { MenuPropType } from "app/utils/Menu";
+import { MenuPropType } from "../../utils/Menu";
 
 class HeaderMenu extends React.Component {
   render() {

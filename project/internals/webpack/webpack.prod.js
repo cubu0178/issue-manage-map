@@ -7,7 +7,7 @@ const root = path.resolve(process.cwd());
 
 const option = {
   entry: [
-    path.join(root, "app/app.jsx"), // Start with src/app.js
+    path.join(root, "project/app/app.jsx"), // Start with src/app.js
   ],
   plugins: [
     // Minify and optimize the index.html

@@ -9,7 +9,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Header from "app/components/Header";
+import Header from "../../components/Header";
 
 import HomePage from "../HomePage";
 import AboutPage from "../AboutPage";

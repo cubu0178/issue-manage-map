@@ -11,12 +11,12 @@ const option = {
   entry: [
     "react-hot-loader/patch",
     "webpack-hot-middleware/client",
-    path.join(root, "app/app.jsx"), // Start with src/app.js
+    path.join(root, "project/app/app.jsx"), // Start with src/app.js
 
   ],
   plugins: [
     new HtmlWebpackPlugin({
-      template: "app/index.html",
+      template: "project/app/index.html",
       inject: true,
     }),
     new webpack.HotModuleReplacementPlugin(),

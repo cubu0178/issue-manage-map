@@ -4,10 +4,10 @@
   "description": "Real-time map that shows maintenance issues, assists with task scheduling, and allows issue reporting.",
   "main": "index.jsx",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.js --color -p --progress --hide-modules --display-optimization-bailout",
+    "build": "cross-env NODE_ENV=production webpack --config project/internals/webpack/webpack.prod.js --color -p --progress --hide-modules --display-optimization-bailout",
     "lint": "eslint . --fix --ext .jsx --ext .js",
     "test": "cross-env NODE_ENV=test jest",
-    "start": "cross-env NODE_ENV=development node ./server/dev.js"
+    "start": "cross-env NODE_ENV=development node ./project/server/dev.js"
   },
   "license": "Apache-2.0",
   "babel": {
@@ -49,9 +49,9 @@
     ]
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/internals/jest/setup.js",
+    "setupTestFrameworkScriptFile": "<rootDir>/project/internals/jest/setup.js",
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/internals/mocks/file.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/project/internals/mocks/file.js",
       "\\.(css)$": "identity-obj-proxy",
       "app/(.*)$": "<rootDir>/app/$1"
     }

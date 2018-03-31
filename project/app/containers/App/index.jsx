@@ -7,16 +7,16 @@
  */
 
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { withRouter, Switch, Route } from "react-router-dom";
+import { Container } from "semantic-ui-react";
 
 import Header from "../../components/Header";
-
 import HomePage from "../HomePage";
 import AboutPage from "../AboutPage";
 import LoginPage from "../LoginPage";
 import NotFoundPage from "../NotFoundPage";
 
-import style from "./app.css";
+import css from "./app.css";
 
 /*
  * The root container of the whole application
@@ -25,16 +25,18 @@ import style from "./app.css";
 
 export default class App extends React.Component {
   render() {
-    return <div >
-      <Header title="Issue map" />
-      <div className={style.container}>
+    const RoutedHeader = withRouter(props => <Header title="Issue Management Map" {...props} />);
+
+    return <div>
+      <RoutedHeader />
+      <Container className={css.main}>
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/about" component={AboutPage} />
           <Route exact path="/login" component={LoginPage} />
-          <Route exact path="" component={NotFoundPage} />
+          <Route component={NotFoundPage} />
         </Switch>
-      </div>
+      </Container>
     </div>;
   }
 }

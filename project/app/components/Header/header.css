@@ -1,18 +1,38 @@
 .header {
     overflow: hidden;
-    background-color: #929292;
+    background-color: #dfcec7;
     width: 100%;
 }
 
 .title {
     flex-grow: 2;
     font-size: 18px;
-    margin-top: auto !important;
-    min-width: 100px;
+    margin: auto !important;
+    min-width: 200px;
+}
+
+.title > a {
+    color: black;
 }
 
 .container {
     width: 100%;
     margin: 0 auto;
     display: flex !important;
+}
+
+.login {
+    width: 100px;
+    height: 40px;
+    margin: auto 0;
+}
+
+.menu-icon {
+    margin: auto 20px !important;
+}
+
+@media (min-width: 700px) {
+    .menu-icon {
+        display: none !important;
+    }
 }

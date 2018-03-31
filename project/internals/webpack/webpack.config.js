@@ -3,7 +3,7 @@ const path = require("path");
 
 // Paths
 const root = path.resolve(process.cwd());
-const app = path.join(process.cwd(), "app");
+const app = path.join(process.cwd(), "project/app");
 
 // configurate function used in the config files
 const configurate = (options) => ({

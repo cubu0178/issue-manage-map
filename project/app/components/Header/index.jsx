@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { Button, Icon, Container } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 import HeaderMenu from "./headerMenu";
 import css from "./header.css";
@@ -11,15 +12,24 @@ const menuItems = [
   { name: "About", path: "/about/" }
 ];
 
+const MenuIcon = () =>
+  (<Icon name="content" className={css["menu-icon"]} size="large" />);
+
 class Header extends React.Component {
   render() {
+    const path = this.props.location.pathname;
+
     return (
       <header className={css.header}>
         <Container className={css.container}>
-          <h1 className={css.title}>{this.props.title}</h1>
-          <HeaderMenu items={menuItems} pathname="/" />
-          <Button>Log in</Button>
-          <Icon name="content" />
+          <h1 className={css.title}>
+            <Link to="/">
+              {this.props.title}
+            </Link>
+          </h1>
+          <HeaderMenu items={menuItems} pathname={path} />
+          <MenuIcon />
+          <Button as={Link} to="/login" color="blue" className={css.login}>Log in</Button>
         </Container>
       </header>
     );
@@ -27,7 +37,10 @@ class Header extends React.Component {
 }
 
 Header.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
+  match: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired
 };
 
 export default Header;

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { Button, Icon, Container } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 import HeaderMenu from "./headerMenu";
 import css from "./header.css";
@@ -21,10 +22,14 @@ class Header extends React.Component {
     return (
       <header className={css.header}>
         <Container className={css.container}>
-          <h1 className={css.title}>{this.props.title}</h1>
+          <h1 className={css.title}>
+            <Link to="/">
+              {this.props.title}
+            </Link>
+          </h1>
           <HeaderMenu items={menuItems} pathname={path} />
           <MenuIcon />
-          <Button color="blue" className={css.login}>Log in</Button>
+          <Button as={Link} to="/login" color="blue" className={css.login}>Log in</Button>
         </Container>
       </header>
     );

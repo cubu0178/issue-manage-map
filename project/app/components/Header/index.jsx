@@ -16,11 +16,13 @@ const MenuIcon = () =>
 
 class Header extends React.Component {
   render() {
+    const path = this.props.location.pathname;
+
     return (
       <header className={css.header}>
         <Container className={css.container}>
           <h1 className={css.title}>{this.props.title}</h1>
-          <HeaderMenu items={menuItems} pathname="/" />
+          <HeaderMenu items={menuItems} pathname={path} />
           <MenuIcon />
           <Button color="blue" className={css.login}>Log in</Button>
         </Container>
@@ -30,7 +32,10 @@ class Header extends React.Component {
 }
 
 Header.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
+  match: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired
 };
 
 export default Header;

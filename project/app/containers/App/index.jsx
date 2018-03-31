@@ -7,7 +7,7 @@
  */
 
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { withRouter, Switch, Route } from "react-router-dom";
 import { Container } from "semantic-ui-react";
 
 import Header from "../../components/Header";
@@ -23,14 +23,16 @@ import NotFoundPage from "../NotFoundPage";
 
 export default class App extends React.Component {
   render() {
+    const RoutedHeader = withRouter(props => <Header title="Issue Management Map" {...props} />);
+
     return <div>
-      <Header title="Maintenance Requests" />
+      <RoutedHeader />
       <Container>
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/about" component={AboutPage} />
           <Route exact path="/login" component={LoginPage} />
-          <Route exact path="" component={NotFoundPage} />
+          <Route component={NotFoundPage} />
         </Switch>
       </Container>
     </div>;

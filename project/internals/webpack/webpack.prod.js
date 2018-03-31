@@ -12,7 +12,7 @@ const option = {
   plugins: [
     // Minify and optimize the index.html
     new HtmlWebpackPlugin({
-      template: "app/index.html",
+      template: "project/app/index.html",
       minify: {
         removeComments: true,
         collapseWhitespace: true,

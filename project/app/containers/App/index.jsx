@@ -16,6 +16,8 @@ import AboutPage from "../AboutPage";
 import LoginPage from "../LoginPage";
 import NotFoundPage from "../NotFoundPage";
 
+import css from "./app.css";
+
 /*
  * The root container of the whole application
  * Where the magic begin
@@ -27,7 +29,7 @@ export default class App extends React.Component {
 
     return <div>
       <RoutedHeader />
-      <Container>
+      <Container className={css.main}>
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/about" component={AboutPage} />

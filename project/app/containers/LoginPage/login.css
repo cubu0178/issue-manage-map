@@ -1,3 +1,40 @@
-.button {
-	width: 100px;
+.login-container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 699px) {
+    .login {
+        width: 300px;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 700px) {
+    .login {
+        width: 450px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .login {
+        width: 700px;
+    }
+}
+
+.cancel {
+    justify-content: space-between;
+}
+
+.forgot {
+    padding-top: 12px;
+    margin-right: 5px;
 }
